@@ -39,7 +39,7 @@ jobs:
       - name: Extract ZIP
         shell: bash
         run: |
-          ZIP_FILE="./KING_DATA_CENTER_PRO_SOURCE(1).zip"
+          ZIP_FILE="./KING_DATA_CENTER_PRO_SOURCE (1).zip"
 
           if [ ! -f "$ZIP_FILE" ]; then
             echo "ERROR: ZIP archive not found!"
