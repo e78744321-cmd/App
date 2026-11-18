@@ -1,3 +1,4 @@
+
 name: Build KING DATA CENTER PRO
 
 on:
@@ -23,6 +24,11 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: |
+            platform-tools
+            platforms;android-35
+            build-tools;35.0.0
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
@@ -38,3 +44,4 @@ jobs:
           name: KING-DATA-CENTER-PRO-APK
           path: KING_DATA_CENTER_PRO/android-companion/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+          
